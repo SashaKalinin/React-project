@@ -3,16 +3,21 @@ import React from 'react';
 const Profile = () => {
     return (
         <div className='content'>
-            <div className='content-img-bg'>
-                <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTNl83-Gff4Wev5w1sXepNoGSfHcwGkMFnyTStiT8o2pHC5LXjj&usqp=CAU' />
-            </div>
-            <div className='content-img-avatar'>
-                <img src='https://st3.depositphotos.com/5366154/13886/i/450/depositphotos_138866008-stock-photo-fire-letter-v-of-burning.jpg' />
+            <div className="about_mi-all">
+                
+                    <img className='avatar' src='https://gtavrl.ru/public/poscreenra.jpg' />
+                
+                <div className="about_mi">
+                    <p className="about_mi-inner">Tom Hardy</p>
+                    <p className="about_mi-inner">Date of Birth: 15 september</p>
+                    <p className="about_mi-inner">City:Minsk</p>
+                    <p className="about_mi-inner">Education:BSUIR</p>
+                    <p className="about_mi-inner">Web Site: https://tomhardy.com</p>
+                </div>
             </div>
             <div>
-                My posts
-          <div>
-                New post
+                <div>
+                    New post
           </div>
                 <div>
                     post 1

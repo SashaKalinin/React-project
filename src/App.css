@@ -1,3 +1,7 @@
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
 .app-wrapper {
   margin: 0 auto;
   display: grid;
@@ -5,26 +9,83 @@
   "header header "
   "nav content ";
   grid-template-rows: 60px 1fr;
-  grid-template-columns: 2fr 10fr;
-  grid-gap: 10px;
-  width: 1200px;
+  grid-template-columns: 3fr 10fr;
+  
+  width: 1440px;
 }
-.nav {
-  grid-area: nav;
-  background-color:red;
 
-}
+/* HEADER
+=================================================================================== */
 .header {
+  display: inline-flex;
   grid-area: header;
-  background-color:green;
-}
-.content {
-  grid-area: content;
-  background-color:peru;
-
+  background-color: rgba(0, 136, 204, .9);;
+  
 }
 header img {
   justify-items: center;
   width: 50px;
   height: 50px;
+  margin-left: 15px;
 }
+header p {
+  color: rgb(204, 120, 71);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+/* NAV
+=================================================================================== */
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  grid-area: nav;
+  /* background-color: rgba(0, 136, 204, .6); */
+  background-image: url(https://cdn.fishki.net/upload/post/2019/06/07/3000936/tn/depositphotos-22458281-s-2019.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+ 
+
+}
+.nav-menu {
+  line-height: 115px;
+  width: 100%;
+  border: 1px solid transparent;
+  
+}
+.nav-menu a {
+  font-size: 25px;
+  text-decoration: none;
+  color: #000;
+  margin: 40px;
+  border: 1px solid transparent;
+  padding: 20px;
+  
+}
+.nav-menu a:hover {
+  color: rgb(204, 120, 71);
+  border: 1px solid rgb(212, 26, 26);
+}
+
+
+/* ABOUT MI
+=================================================================================== */
+.about_mi-all {
+  display: flex;
+  width: 100%;
+  height: 600px;
+}
+.avatar {
+  width: 70%;
+  height: 486px;
+  border: 6px solid rgba(0, 136, 204, .8);
+}
+
+
+
+
