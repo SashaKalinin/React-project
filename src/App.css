@@ -1,17 +1,22 @@
 * {
-  font-family: sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   box-sizing: border-box;
+  
+}
+p,h1,h2,h3,h4,h5,h6 {
+  padding: 0;
+  margin: 0;
 }
 .app-wrapper {
-  margin: 0 auto;
-  display: grid;
-  grid-template-areas: 
-  "header header "
-  "nav content ";
-  grid-template-rows: 60px 1fr;
-  grid-template-columns: 3fr 10fr;
-  
-  width: 1440px;
+ margin: 0 auto;
+ display: grid;
+ grid-template-areas:   "header header "  "nav content ";
+ grid-template-rows: 60px 1fr;
+ grid-template-columns: 3fr 10fr;
+ max-width: 1200px;
+ min-width: 700px;
+ height: 100%;
+ border: 1px solid transparent ;
 }
 
 /* HEADER
@@ -19,8 +24,9 @@
 .header {
   display: inline-flex;
   grid-area: header;
-  background-color: rgba(0, 136, 204, .9);;
-  
+  background-color: rgba(0, 136, 204, .9);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 header img {
   justify-items: center;
@@ -32,60 +38,227 @@ header p {
   color: rgb(204, 120, 71);
   font-weight: bold;
   font-size: 20px;
+  margin-top: 20px;
 }
 
 
 /* NAV
 =================================================================================== */
 .nav {
+  height: 100%;
   display: flex;
-  flex-direction: column;
   justify-content:center;
-  align-items: center;
   grid-area: nav;
   /* background-color: rgba(0, 136, 204, .6); */
   background-image: url(https://cdn.fishki.net/upload/post/2019/06/07/3000936/tn/depositphotos-22458281-s-2019.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  
- 
-
+  }
+.nav-inner {
+  width: 100%;
+  height: 800px;
 }
 .nav-menu {
+  display: flex;
+  flex-direction: column;
   line-height: 115px;
+  height: 800px;
   width: 100%;
   border: 1px solid transparent;
   
 }
 .nav-menu a {
-  font-size: 25px;
+  display: flex;
+  justify-content:center;
+  font-size: 20px;
   text-decoration: none;
   color: #000;
-  margin: 40px;
   border: 1px solid transparent;
-  padding: 20px;
-  
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
 }
 .nav-menu a:hover {
   color: rgb(204, 120, 71);
-  border: 1px solid rgb(212, 26, 26);
+  border: 1px solid black;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
+
+/* PROFILE
+=================================================================================== */
 
 
 /* ABOUT MI
 =================================================================================== */
-.about_mi-all {
-  display: flex;
+.content {
   width: 100%;
-  height: 600px;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 39% 61%;
+  grid-template-areas: 
+  'about_mi-all'
+  'my-post';
+}
+.about_mi-all {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 83%;
+  grid-template-areas: 'avatar about_mi' ;
+  grid-area: 'about_mi-all' ;
+  width: 100%;
+  height: 376px;
 }
 .avatar {
-  width: 70%;
-  height: 486px;
+  grid-area: avatar;
+  width: 100%;
+  min-width: 460px;
+  height: 100%;
   border: 6px solid rgba(0, 136, 204, .8);
+}
+.about_mi {
+  grid-area: about_mi;
+}
+.about_mi-inner {
+  width: 100%;
+  height: 100%;
+  margin-left: 10px;
+}
+.about_mi-info:nth-child(1) {
+  color: rgb(204, 120, 71);
+ 
+}
+.about_mi-info {
+  font-size: 20px;
+  line-height: 291%;
+  letter-spacing: 2px;
+  font-weight: 700;
 }
 
 
 
+/* MY POST
+=================================================================================== */
 
+
+.my-post {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows:50% 25% 25% ;
+  grid-area: 'my-post';
+}
+.my-post-inner {
+  display: grid;
+  grid-template-rows: 20% 80%;
+  grid-template-areas: 'my-post-title''my-post-write';
+  margin-left: 10px;
+
+}
+.my-post-title {
+  grid-area: 'my-post-title';
+  display:flex;
+
+}
+.post-title {
+  font-size: 23px;
+  font-weight: bold;
+  align-self: center;
+  
+
+}
+.my-post-write {
+  grid-area: 'my-post-write';
+  width: 100%;
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+}
+.my-post-write textarea {
+  width: 100%;
+  height: 52%;
+  font-size: 18px;
+  letter-spacing: 1px;
+  resize:none;
+  border: 2px solid rgba(0, 136, 204, .8);
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+}
+.my-post-write textarea:focus {
+  box-shadow: 9px 8px 15px 6px rgba(0, 136, 204, .3);
+}
+.my-post-write button {
+  font-size: 23px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 5px 3px;
+  width: 161px;
+  height: 51px;
+  margin-top: 10px;
+  background-color: rgba(0, 136, 204, .8);
+  color: #fff;
+  border: 1px solid rgb(204, 120, 71);
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+}
+.my-post-write button:focus {
+  outline: none;
+}
+.my-post-write button:hover {
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  color: #000;
+}
+.my-post-write button:active {
+  color: rgb(204, 120, 71);
+}
+
+.my-post-share {
+  display: flex;
+  align-items: center;
+}
+.post-circle {
+  width: 41px;
+  height: 41px;
+  margin-left: 10px;
+  background-color:rgba(0, 136, 204, .8) ;
+  border: 1px solid rgb(204, 120, 71);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.post {
+  width: 80%;
+  margin-left: 20px;
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
