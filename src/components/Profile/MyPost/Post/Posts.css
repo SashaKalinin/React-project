@@ -1,0 +1,25 @@
+
+ .my-post-share {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+  .post-circle {
+    width: 41px;
+    height: 41px;
+    margin-left: 10px;
+    background-color:rgba(0, 136, 204, .8) ;
+    border: 1px solid rgb(204, 120, 71);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+  .post {
+    width: 80%;
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }

@@ -1,0 +1,46 @@
+.content {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 39% 61%;
+    grid-template-areas: 
+    'about_mi-all'
+    'my-post';
+  }
+  .about_mi-all {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 83%;
+    grid-template-areas: 'avatar about_mi' ;
+    grid-area: 'about_mi-all' ;
+    width: 100%;
+    height: 376px;
+  }
+  .avatar {
+    grid-area: avatar;
+    width: 100%;
+    height: 100%;
+    border: 6px solid rgba(0, 136, 204, .8);
+  }
+  .about_mi {
+    grid-area: about_mi;
+  }
+  .about_mi-inner {
+    width: 100%;
+    height: 100%;
+    margin-left: 10px;
+  }
+  .about_mi-info:nth-child(1) {
+    color: rgb(204, 120, 71);
+   
+  }
+  .about_mi-info {
+    font-size: 20px;
+    line-height: 291%;
+    letter-spacing: 2px;
+    font-weight: 700;
+  }
+  
+  
+  
+ 
