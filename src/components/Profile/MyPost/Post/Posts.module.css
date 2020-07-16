@@ -1,10 +1,10 @@
 
- .my-post-share {
+ .myPostShare {
   display: flex;
   align-items: center;
   padding: 5px;
 }
-  .post-circle {
+  .postCircle {
     width: 41px;
     height: 41px;
     margin-left: 10px;
@@ -22,4 +22,7 @@
     font-weight: 500;
     font-size: 20px;
     margin-bottom: 20px;
+  }
+  .counterLikes {
+
   }

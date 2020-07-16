@@ -5,7 +5,21 @@
     grid-template-columns: 100%;
     grid-template-rows: 100%;
     grid-template-areas: 'about_mi-all' 'my-post';
-    background-color: rgba(0, 136, 204, .6);
+    background-image: url(https://cdn.fishki.net/upload/post/2019/06/07/3000936/tn/depositphotos-22458281-s-2019.jpg);
+    background-repeat: no-repeat;
+    background-size:200%;
+    animation: sky 300s linear  infinite;
+}
+@keyframes sky {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
 }
 .dialogs {
     display: grid;
@@ -19,7 +33,7 @@
     align-items: center;
     line-height: 80px;
     letter-spacing: 1px;
-    border-right: 1px solid rgb(204, 120, 71);
+    border-right: 1px solid rgba(0, 136, 204, .8);
     border-radius: 20px;
 }
 .dialogItems .active {
@@ -54,7 +68,7 @@
     color: rgb(204, 120, 71);
 }
 .masseges {
-    border-left: 1px solid rgb(204, 120, 71);
+    border-left: 1px solid rgba(0, 136, 204, .8);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -70,7 +84,7 @@
 
 
 }
-.circleDialog {
+.imgDialog {
     margin: 3px 0px 0px 10px;
     width: 50px;
     height: 50px;
@@ -102,7 +116,18 @@
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    background-color: #000;
+    background-color: #000000;
     align-self: center;
     margin-right: 5px;
+}
+.span2 {
+    border: 1px solid #000;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #fff;
+    align-self: center;
+    margin-right: 5px;
+    margin-left: 20px;
+
 }

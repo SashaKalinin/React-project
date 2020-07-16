@@ -3,18 +3,17 @@
     display: flex;
     justify-content: center;
     grid-area: nav;
-    background-image: url(https://cdn.fishki.net/upload/post/2019/06/07/3000936/tn/depositphotos-22458281-s-2019.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: linear-gradient(180deg, #1c92d2,#f2fcfe) ;
+    border-right: 1px solid rgba(0, 136, 204, .8);
+    border-top: 1px solid rgba(0, 136, 204, .8);
 }
 
-.nav-inner {
+.navInner {
     width: 100%;
     height: 800px;
 }
 
-.nav-menu {
+.navMenu {
     display: flex;
     flex-direction: column;
     line-height: 115px;
@@ -24,7 +23,7 @@
 
 }
 
-.nav-menu a {
+.navMenu a {
     display: flex;
     justify-content: center;
     font-size: 20px;
@@ -44,7 +43,7 @@
     -o-transition: 0.3s ease-in-out;
 }
 
-.nav-menu a:hover {
+.navMenu a:hover {
     color: rgb(204, 120, 71);
     border: 1px solid black;
     border-radius: 10px;
@@ -53,7 +52,6 @@
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 }
-
-.nav-menu a.active {
+a.activeLink {
     color: rgb(204, 120, 71);
 }

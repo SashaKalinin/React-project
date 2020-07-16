@@ -2,47 +2,53 @@ import React from 'react'
 import s from './Dialogs.module.css'
 import {NavLink} from "react-router-dom";
 
+const DialogItem = (props) => {
+    let path = '/dialogs/'+ props.id;
+    return (
+        <NavLink to={path} className={s.dialog} activeClassName={s.activeLink}>
+            <div className={s.imgDialog}></div>
+            <div className={s.user}>{props.name}</div>
+        </NavLink>
+    );
+}
+
+const MassegeGet = (props) => {
+    return(
+        <div className={s.massege}>
+            <span className={s.span}></span>
+            <p className={s.massegeP}>{props.massege}</p>
+        </div>
+    )
+}
+
+const MassegeSend = (props) => {
+    return(
+        <div className={s.massege}>
+            <span className={s.span2}></span>
+            <p className={s.massegeP}>{props.massege}</p>
+        </div>
+    )
+}
 
 const Dialogs = (props) => {
     return (
         <div className={s.content}>
             <div className={s.dialogs}>
                 <div className={s.dialogItems}>
-                    <NavLink to='#' className={s.dialog} activeClassName={s.activeLink}>
-                        <div className={s.circleDialog}></div>
-                        <div className={s.user}>Dima</div>
-                    </NavLink>
-                    <NavLink to='#' className={s.dialog} activeClassName={s.activeLink}>
-                        <div className={s.circleDialog}></div>
-                        <div className={s.user}>Sasha</div>
-                    </NavLink>
-                    <NavLink to='#' className={s.dialog} activeClassName={s.activeLink}>
-                        <div className={s.circleDialog}></div>
-                        <div className={s.user}>Mary</div>
-                    </NavLink>
-                    <NavLink to='#' className={s.dialog} activeClassName={s.activeLink}>
-                        <div className={s.circleDialog}></div>
-                        <div className={s.user}>Roman</div>
-                    </NavLink>
+                    <DialogItem name = "Dima" id = "1"/>
+                    <DialogItem name = "Sasha" id = "2"/>
+                    <DialogItem name = "Mary" id = "3"/>
+                    <DialogItem name = "Roman" id = "4"/>
                 </div>
                 <div className={s.masseges}>
                     <div className={s.wrapper}>
-                        <div className={s.massege}>
-                            <span className={s.span}></span>
-                            <p className={s.massegeP}>Hi</p>
-                        </div>
-                        <div className={s.massege}>
-                            <span className={s.span}></span>
-                            <p className={s.massegeP}>How are you?</p>
-                        </div>
-                        <div className={s.massege}>
-                            <span className={s.span}></span>
-                            <p className={s.massegeP}>You hear?</p>
-                        </div>
+                        <MassegeGet massege = "Hi"/>
+                        <MassegeGet massege = "How are you?"/>
+                        <MassegeGet massege = "You hear?"/>
+                        <MassegeSend massege = "Im fine"/>
                     </div>
                 </div>
             </div>
-
         </div>
     )
 }

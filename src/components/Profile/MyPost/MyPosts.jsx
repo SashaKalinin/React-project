@@ -1,16 +1,16 @@
 import React from 'react';
-import './MyPosts.css';
+import s from './MyPosts.module.css';
 import Posts from './Post/Posts';
 
 const MyPosts = () => {
     return (
-            <div className='my-post'>
-                <div className='my-post-inner'>
-                    <div className='my-post-title'>
-                        <p className='post-title'>My posts</p>
+            <div className={s.myPost}>
+                <div className={s.myPostInner}>
+                    <div className={s.myPostTitle}>
+                        <p className={s.postTitle}>My posts</p>
                     </div>
-                    <form className='my-post-write'>
-                        <textarea placeholder='your news...' form="" name="your-mews" required ></textarea>
+                    <form className={s.myPostWrite}>
+                        <textarea placeholder='Your news...' form="" name="your-mews" required ></textarea>
                         <button href='#'>Send</button>
                     </form>
                 </div>

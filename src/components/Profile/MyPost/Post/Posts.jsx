@@ -1,13 +1,13 @@
 import React from 'react';
-import './Posts.css';
+import s from './Posts.module.css';
 
 const Posts = (props) => {
     return (
 
-        <div className='my-post-share'>
-            <div className='post-circle'></div><p className='post'>{props.messegae}</p>
+        <div className={s.myPostShare}>
+            <div className={s.postCircle}></div><p className={s.post}>{props.messegae}</p>
             <div>
-    <span className='counter-likes'>0</span>
+    <span className={s.counterLikes}>0</span>
                 <span> Like</span>
             </div>
         </div>
