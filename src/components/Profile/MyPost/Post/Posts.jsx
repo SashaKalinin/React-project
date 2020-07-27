@@ -5,9 +5,9 @@ const Posts = (props) => {
     return (
 
         <div className={s.myPostShare}>
-            <div className={s.postCircle}></div><p className={s.post}>{props.messegae}</p>
+            <div className={s.postCircle}></div><p className={s.post}>{props.message}</p>
             <div>
-    <span className={s.counterLikes}>0</span>
+    <span className={s.counterLikes}>{props.likesCount}</span>
                 <span> Like</span>
             </div>
         </div>

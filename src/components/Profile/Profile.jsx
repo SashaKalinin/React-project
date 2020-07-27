@@ -5,13 +5,13 @@ import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 
 const Profile = () => {
+
+    let dataArr = [{name:"Tom Hardy", dateOfBirth:"15 september", city:"Minsk", education:"BSUIR", webSite:"https://tomhardy.com" }]
+    let profileArr = dataArr.map(elem => <ProfileInfo name={elem.name} dateOfBirth={elem.dateOfBirth} city={elem.city} education={elem.education} webSite={elem.webSite}/>)
+
     return (
         <div className={s.content}>
-            <ProfileInfo name="Tom Hardy"
-                         dateOfBirth="15 september"
-                         city="Minsk"
-                         education="BSUIR"
-                         webSite="https://tomhardy.com"/>
+            {profileArr}
             <MyPosts/>
         </div>
     );

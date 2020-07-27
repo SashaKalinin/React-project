@@ -3,7 +3,7 @@ import s from './Dialogs.module.css'
 import {NavLink} from "react-router-dom";
 
 const DialogItem = (props) => {
-    let path = '/dialogs/'+ props.id;
+    let path = '/dialogs/' + props.id;
     return (
         <NavLink to={path} className={s.dialog} activeClassName={s.activeLink}>
             <div className={s.imgDialog}></div>
@@ -12,40 +12,53 @@ const DialogItem = (props) => {
     );
 }
 
-const MassegeGet = (props) => {
-    return(
-        <div className={s.massege}>
+const MessageGet = (props) => {
+    return (
+        <div className={s.message}>
             <span className={s.span}></span>
-            <p className={s.massegeP}>{props.massege}</p>
+            <p className={s.messageP}>{props.message}</p>
         </div>
     )
 }
 
-const MassegeSend = (props) => {
-    return(
-        <div className={s.massege}>
+const MessageSend = (props) => {
+    return (
+        <div className={s.message}>
             <span className={s.span2}></span>
-            <p className={s.massegeP}>{props.massege}</p>
+            <p className={s.messageP}>{props.message}</p>
         </div>
     )
 }
 
 const Dialogs = (props) => {
+
+    let DialogsData = [
+        {id: 1, name: "Dima"},
+        {id: 2, name: "Sasha"},
+        {id: 3, name: "Mary"},
+        {id: 4, name: "Roman"}
+    ]
+
+    let DialogsArray = DialogsData.map(elem => <DialogItem name={elem.name} id={elem.id}/>);
+
+    let MessagesGetData = [
+        {id: 1, message: "Hi", flag: 0},
+        {id: 2, message: "How are you?", flag: 0},
+        {id: 3, message: "You hear?", flag: 0},
+        {id: 1, message: "Im fine", flag: 1}
+    ]
+
+    let MessagesArr = MessagesGetData.map(elem => <MessageGet message={elem.message} id={elem.id} flag={elem.flag}/>)
+
     return (
         <div className={s.content}>
             <div className={s.dialogs}>
                 <div className={s.dialogItems}>
-                    <DialogItem name = "Dima" id = "1"/>
-                    <DialogItem name = "Sasha" id = "2"/>
-                    <DialogItem name = "Mary" id = "3"/>
-                    <DialogItem name = "Roman" id = "4"/>
+                    {DialogsArray}
                 </div>
-                <div className={s.masseges}>
+                <div className={s.messeges}>
                     <div className={s.wrapper}>
-                        <MassegeGet massege = "Hi"/>
-                        <MassegeGet massege = "How are you?"/>
-                        <MassegeGet massege = "You hear?"/>
-                        <MassegeSend massege = "Im fine"/>
+                        {MessagesArr}
                     </div>
                 </div>
             </div>

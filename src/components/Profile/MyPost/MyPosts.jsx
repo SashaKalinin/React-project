@@ -3,6 +3,12 @@ import s from './MyPosts.module.css';
 import Posts from './Post/Posts';
 
 const MyPosts = () => {
+
+    let postData = [
+        {id:1, message:"Hey, how are you?", likesCount:12},
+        {id:2, message:"It is perfect page", likesCount:11}
+    ]
+    let postArr = postData.map(elem => <Posts message = {elem.message} likesCount = {elem.likesCount}/>)
     return (
             <div className={s.myPost}>
                 <div className={s.myPostInner}>
@@ -14,8 +20,7 @@ const MyPosts = () => {
                         <button href='#'>Send</button>
                     </form>
                 </div>
-                <Posts messegae = 'Hey, how are you?'/>
-                <Posts messegae = 'It is perfect page'/>
+                {postArr}
             </div>
         
     );
